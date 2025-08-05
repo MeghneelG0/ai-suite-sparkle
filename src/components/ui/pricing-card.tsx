@@ -29,7 +29,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
       >
         {popular && (
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-            <div className="gradient-primary px-4 py-2 rounded-full text-white text-sm font-semibold flex items-center gap-2">
+            <div className="bg-primary px-4 py-2 rounded-full text-white text-sm font-semibold flex items-center gap-2 shadow-xl">
               <Crown className="h-4 w-4" />
               Most Popular
             </div>
@@ -44,7 +44,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
           
           <div className="text-center">
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-5xl font-bold gradient-text">{price}</span>
+              <span className="text-5xl font-bold text-primary">{price}</span>
               <span className="text-muted-foreground">/{period}</span>
             </div>
           </div>
