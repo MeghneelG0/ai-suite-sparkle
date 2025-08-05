@@ -1,9 +1,9 @@
-import { 
-  Brain, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Globe, 
+import {
+  Brain,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
   BarChart3,
   Sparkles,
   Bot
@@ -55,25 +55,43 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
-      {/* Subtle Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-card/5 to-background/50" />
-      
-      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
+    <section className="py-32 relative overflow-hidden section-transition section-fade-in">
+      {/* Seamless Transition Fade Overlay - This eliminates the hard line */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-10"
+      />
+      {/* Background Video */}
+      <div className="absolute inset-0 opacity-20">
+        <video
+          src="https://videos.pexels.com/video-files/29344546/12647214_1920_1080_30fps.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ filter: 'hue-rotate(180deg) saturate(1.2)' }}
+        />
+      </div>
+
+      {/* Subtle Background Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
+
+      <div className="container mx-auto px-6 flex flex-col relative z-10" style={{ maxWidth: '80rem' }}>
         {/* Section Header */}
         <div className="text-center space-y-8 mb-24">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-primary text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-primary text-sm font-medium">
             <Sparkles className="h-4 w-4" />
             Powerful Features
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-center">
-            Everything You Need to
-            <span className="block text-primary">Dominate Your Market</span>
+            <span className="dynamic-gradient-text">Everything You Need to</span>
+            <span className="block dynamic-gradient-text">Dominate Your Market</span>
           </h2>
-          
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Our comprehensive AI suite provides all the tools you need to create, manage, 
+
+          <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+            Our comprehensive AI suite provides all the tools you need to create, manage,
             and optimize your marketing campaigns with unprecedented precision and efficiency.
           </p>
         </div>
@@ -95,66 +113,14 @@ export const FeaturesSection = () => {
           ))}
         </div>
 
-        {/* Feature Comparison */}
-        <div className="mt-24 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4">Why Choose ADmyBRAND AI Suite?</h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Compare our advanced features with traditional marketing tools
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center space-y-4">
-              <h4 className="text-lg font-semibold text-muted-foreground">Traditional Tools</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div>Manual campaign setup</div>
-                <div>Basic reporting</div>
-                <div>Limited integrations</div>
-                <div>Reactive optimization</div>
-              </div>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <h4 className="text-lg font-semibold text-primary">ADmyBRAND AI Suite</h4>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  AI-powered automation
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  Predictive analytics
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  Universal integrations
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  Proactive optimization
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <h4 className="text-lg font-semibold text-foreground">Your Results</h4>
-              <div className="space-y-2 text-sm">
-                <div className="text-accent font-medium">↗ 250% ROI increase</div>
-                <div className="text-accent font-medium">↗ 80% time saved</div>
-                <div className="text-accent font-medium">↗ 95% accuracy</div>
-                <div className="text-accent font-medium">↗ 24/7 optimization</div>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <p className="text-muted-foreground mb-6 text-lg">
+          <p className="text-white/80 mb-6 text-lg">
             Ready to experience the future of marketing?
           </p>
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 cursor-pointer group transition-all duration-300">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-black/70 via-gray-900/60 to-gray-800/50 backdrop-blur-xl border border-white/20 hover:bg-white/10 cursor-pointer group transition-all duration-300">
             <span className="text-primary font-medium">Explore All Features</span>
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           </div>

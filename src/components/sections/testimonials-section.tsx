@@ -63,7 +63,7 @@ export const TestimonialsSection = () => {
     if (!isAutoPlaying) return
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === testimonials.length - 3 ? 0 : prevIndex + 1
       )
     }, 5000)
@@ -73,14 +73,14 @@ export const TestimonialsSection = () => {
 
   const nextTestimonial = () => {
     setIsAutoPlaying(false)
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 3 ? 0 : prevIndex + 1
     )
   }
 
   const prevTestimonial = () => {
     setIsAutoPlaying(false)
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 3 : prevIndex - 1
     )
   }
@@ -89,22 +89,22 @@ export const TestimonialsSection = () => {
     <section className="py-24 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-card/20 to-background" />
-      
-      <div className="container mx-auto px-4 relative z-10">
+
+      <div className="container mx-auto px-4 flex flex-col" style={{ maxWidth: '80rem' }}>
         {/* Section Header */}
         <div className="text-center space-y-6 mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Sparkles className="h-4 w-4" />
             Customer Success
           </div>
-          
+
           <h2 className="section-title gradient-text">
             Loved by Marketing
             <span className="block">Teams Worldwide</span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Join thousands of satisfied customers who have transformed their marketing 
+            Join thousands of satisfied customers who have transformed their marketing
             results with ADmyBRAND AI Suite.
           </p>
         </div>
@@ -136,7 +136,7 @@ export const TestimonialsSection = () => {
           >
             <ChevronLeft className="h-4 w-4" />
           </Button>
-          
+
           <Button
             variant="outline"
             size="icon"
@@ -153,8 +153,8 @@ export const TestimonialsSection = () => {
             <button
               key={index}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-primary w-8' 
+                index === currentIndex
+                  ? 'bg-primary w-8'
                   : 'bg-border hover:bg-primary/50'
               }`}
               onClick={() => {

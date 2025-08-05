@@ -1,10 +1,10 @@
-import { 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Youtube, 
-  Mail, 
-  Phone, 
+import {
+  Twitter,
+  Linkedin,
+  Github,
+  Youtube,
+  Mail,
+  Phone,
   MapPin,
   Sparkles
 } from "lucide-react"
@@ -16,8 +16,8 @@ export const Footer = () => {
     <footer className="relative bg-card/30 border-t border-border/20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card/50" />
-      
-      <div className="container mx-auto px-4 relative z-10">
+
+      <div className="container mx-auto px-4 flex flex-col" style={{ maxWidth: '80rem' }}>
         {/* Newsletter Section */}
         <div className="py-16 border-b border-border/20">
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -25,26 +25,26 @@ export const Footer = () => {
               <Sparkles className="h-4 w-4" />
               Stay Updated
             </div>
-            
+
             <h3 className="text-3xl font-bold gradient-text">
               Get the Latest AI Marketing Insights
             </h3>
-            
+
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Join 50,000+ marketers who receive our weekly newsletter with AI trends, 
+              Join 50,000+ marketers who receive our weekly newsletter with AI trends,
               case studies, and exclusive tips to grow your business.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input 
-                placeholder="Enter your email" 
+              <Input
+                placeholder="Enter your email"
                 className="glass border-border/40"
               />
               <Button variant="hero" className="whitespace-nowrap">
                 Subscribe
               </Button>
             </div>
-            
+
             <p className="text-xs text-muted-foreground">
               No spam. Unsubscribe at any time.
             </p>
@@ -61,11 +61,11 @@ export const Footer = () => {
                   ADmyBRAND AI Suite
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Transforming marketing with AI-powered automation, predictive analytics, 
+                  Transforming marketing with AI-powered automation, predictive analytics,
                   and intelligent campaign management. Join the future of marketing today.
                 </p>
               </div>
-              
+
               {/* Social Links */}
               <div className="flex gap-4">
                 <Button variant="outline" size="icon" className="glass glass-hover">
@@ -123,7 +123,7 @@ export const Footer = () => {
                   </li>
                 ))}
               </ul>
-              
+
               {/* Contact Info */}
               <div className="space-y-3 pt-4 border-t border-border/20">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
@@ -149,7 +149,7 @@ export const Footer = () => {
             <p className="text-sm text-muted-foreground">
               © 2024 ADmyBRAND AI Suite. All rights reserved.
             </p>
-            
+
             <div className="flex items-center gap-6 text-sm">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy

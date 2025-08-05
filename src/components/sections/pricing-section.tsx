@@ -59,22 +59,22 @@ export const PricingSection = () => {
     <section className="py-32 relative overflow-hidden">
       {/* Subtle Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-card/5" />
-      
-      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
+
+      <div className="container mx-auto px-6 flex flex-col" style={{ maxWidth: '80rem' }}>
         {/* Section Header */}
         <div className="text-center space-y-8 mb-24">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-primary text-sm font-medium">
             <Sparkles className="h-4 w-4" />
             Simple Pricing
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-center">
             Choose Your
             <span className="block text-primary">Growth Plan</span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Start free and scale as you grow. All plans include our core AI features 
+            Start free and scale as you grow. All plans include our core AI features
             with no hidden fees or long-term commitments. Trusted by 10,000+ marketing teams worldwide.
           </p>
         </div>
@@ -124,7 +124,7 @@ export const PricingSection = () => {
               Additional capabilities available for Enterprise customers
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center space-y-2">
               <div className="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center">
@@ -161,7 +161,7 @@ export const PricingSection = () => {
         <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl max-w-3xl mx-auto">
           <h3 className="text-xl font-semibold mb-4 text-primary">30-Day Money-Back Guarantee</h3>
           <p className="text-muted-foreground mb-6">
-            Not satisfied? Get a full refund within 30 days, no questions asked. 
+            Not satisfied? Get a full refund within 30 days, no questions asked.
             We're confident you'll love ADmyBRAND AI Suite and see immediate results.
           </p>
           <div className="flex justify-center items-center gap-8 text-sm text-muted-foreground">
