@@ -20,14 +20,18 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
           className
         )}
       >
-        <CardHeader className="flex flex-col items-center text-center space-y-6 pb-4 flex-shrink-0">
-          <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 backdrop-blur-sm border border-primary/20">
-            <Icon className="h-8 w-8" />
+        <CardHeader className="flex flex-col items-center text-center space-y-4 md:space-y-6 pb-4 flex-shrink-0 pt-6">
+          <div className="p-3 md:p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 backdrop-blur-sm border border-primary/20">
+            <Icon className="h-6 w-6 md:h-8 md:w-8" />
           </div>
         </CardHeader>
-        <CardContent className="text-center space-y-3 flex-1 flex flex-col justify-center">
-          <CardTitle className="text-xl font-semibold text-white">{title}</CardTitle>
-          <CardDescription className="leading-relaxed text-sm text-white/80">{description}</CardDescription>
+        <CardContent className="text-center space-y-4 flex-1 flex flex-col justify-center px-4 md:px-6">
+          <CardTitle className="text-lg md:text-xl font-medium text-white leading-tight">{title}</CardTitle>
+          <CardDescription 
+            className="text-sm md:text-base text-slate-400 font-medium feature-description"
+          >
+            {description}
+          </CardDescription>
         </CardContent>
       </Card>
     )

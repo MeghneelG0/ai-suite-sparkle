@@ -99,6 +99,13 @@ All colors MUST be HSL. Professional AI/tech aesthetic with glassmorphism.
     box-shadow: var(--shadow-glass);
   }
 
+  /* Feature card description styling */
+  .feature-description {
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
   .glass-hover:hover {
     box-shadow: var(--shadow-glow);
   }
@@ -236,18 +243,19 @@ All colors MUST be HSL. Professional AI/tech aesthetic with glassmorphism.
   }
 
   body {
-    @apply bg-background text-foreground font-body;
-    font-family: var(--font-body);
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-hero);
+    font-family: 'Inter', system-ui, sans-serif;
     @apply font-semibold;
   }
 
   .hero-title {
     @apply text-6xl md:text-8xl font-bold gradient-text leading-tight;
-    font-family: var(--font-hero);
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
   .section-title {
@@ -320,7 +328,7 @@ All colors MUST be HSL. Professional AI/tech aesthetic with glassmorphism.
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
 }
 
-/* Dynamic Gradient Text */
+/* Dynamic Gradient Text - Multiple Variants for Different Sections */
 .dynamic-gradient-text {
   background: linear-gradient(90deg, #a855f7, #ec4899, #3b82f6, #a855f7);
   background-size: 300% 100%;
@@ -328,6 +336,42 @@ All colors MUST be HSL. Professional AI/tech aesthetic with glassmorphism.
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: dynamic-gradient-text 4s ease-in-out infinite;
+}
+
+.dynamic-gradient-text-features {
+  background: linear-gradient(90deg, #ffffff, #3b82f6, #a855f7, #ffffff);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: dynamic-gradient-text 5s ease-in-out infinite;
+}
+
+.dynamic-gradient-text-pricing {
+  background: linear-gradient(90deg, #ec4899, #ffffff, #3b82f6, #ec4899);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: dynamic-gradient-text 4.5s ease-in-out infinite;
+}
+
+.dynamic-gradient-text-testimonials {
+  background: linear-gradient(90deg, #3b82f6, #a855f7, #ffffff, #3b82f6);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: dynamic-gradient-text 6s ease-in-out infinite;
+}
+
+.dynamic-gradient-text-contact {
+  background: linear-gradient(90deg, #a855f7, #ffffff, #ec4899, #a855f7);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: dynamic-gradient-text 5.5s ease-in-out infinite;
 }
 
 @keyframes dynamic-gradient-text {
@@ -383,6 +427,62 @@ All colors MUST be HSL. Professional AI/tech aesthetic with glassmorphism.
 /* Section Transitions */
 .section-transition {
   transition: all 0.8s ease-in-out;
+  position: relative;
+}
+
+/* Smooth fade transition between sections */
+.section-fade-transition-out {
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    hsl(220 25% 4% / 0.3) 40%,
+    hsl(220 25% 4% / 0.8) 80%,
+    hsl(220 25% 4%) 100%);
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.section-fade-transition-in {
+  background: linear-gradient(to bottom,
+    hsl(220 25% 4%) 0%,
+    hsl(220 25% 4% / 0.8) 20%,
+    hsl(220 25% 4% / 0.3) 60%,
+    transparent 100%);
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Smooth section transition animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 
 /* Gradient Overlays for Smooth Section Transitions */
@@ -432,4 +532,45 @@ All colors MUST be HSL. Professional AI/tech aesthetic with glassmorphism.
 
 .section-fade-in {
   animation: section-fade-in 0.8s ease-out forwards;
+}
+
+/* BorderBeam Animation */
+@keyframes border-beam {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* Utility for border-beam animation */
+.animate-border-beam {
+  animation: border-beam linear infinite;
+  animation-duration: var(--duration, 15s);
+}
+
+/* Marquee Animations */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+/* Utility classes for marquee animation */
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
 }

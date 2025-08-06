@@ -17,7 +17,7 @@ export const Footer = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card/50" />
 
-      <div className="container mx-auto px-4 flex flex-col" style={{ maxWidth: '80rem' }}>
+      <div className="container mx-auto px-4 flex flex-col relative z-10" style={{ maxWidth: '80rem' }}>
         {/* Newsletter Section */}
         <div className="py-16 border-b border-border/20">
           <div className="max-w-4xl mx-auto text-center space-y-6">

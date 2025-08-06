@@ -106,7 +106,10 @@ export const ValueStreamSection = () => {
   };
 
   return (
-    <section className="py-32 relative overflow-hidden section-transition section-fade-in">
+    <section className="py-24 md:py-32 bg-black relative overflow-hidden section-transition section-fade-in">
+      {/* Smooth fade transition from previous section */}
+      <div className="section-fade-transition-in"></div>
+      
       {/* Top Gradient Overlay for Smooth Transition */}
       <div className="section-overlay-top" />
       {/* Bottom Gradient Overlay for Smooth Transition */}
@@ -119,7 +122,7 @@ export const ValueStreamSection = () => {
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-primary font-medium text-sm">Value Stream Flow</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter leading-tight mb-6 dynamic-gradient-text-features">
             From Problems to Solutions
           </h2>
           <p className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -150,7 +153,7 @@ export const ValueStreamSection = () => {
                       className={`w-full justify-start p-4 h-auto text-left transition-all duration-300 relative z-20 ${
                         activeProblem === index
                           ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 border-primary"
-                          : "bg-gray-900/95 hover:bg-gray-800/95 border-gray-700/50 text-white/70 hover:text-white hover:border-gray-600/70 backdrop-blur-sm"
+                          : "!bg-gray-900 hover:!bg-gray-800 border-gray-700/50 text-white/70 hover:text-white hover:border-gray-600/70 backdrop-blur-sm"
                       }`}
                       onClick={() => handleProblemChange(index)}
                     >

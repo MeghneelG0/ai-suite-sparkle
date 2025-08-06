@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -65,8 +66,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				hero: ['var(--font-hero)'],
-				body: ['var(--font-body)']
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				hero: ['Inter', 'system-ui', 'sans-serif'],
+				body: ['Inter', 'system-ui', 'sans-serif']
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
@@ -104,13 +106,19 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'border-beam': {
+					'100%': {
+						'offset-distance': '100%'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'border-beam': 'border-beam linear infinite'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

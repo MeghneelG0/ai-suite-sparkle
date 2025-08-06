@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# ADmyBRAND AI Suite
 
-## Project info
+A modern SaaS landing page showcasing AI-powered marketing automation platform with glassmorphism design and smooth animations.
 
-**URL**: https://lovable.dev/projects/586db1fd-7119-4bbb-b73b-431574ac6be7
+## 🚀 Built in Less Than 6 Hours
 
-## How can I edit this code?
+This project was designed, developed, and deployed in **under 6 working hours** as a rapid prototyping challenge.
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Modern Design**: Glassmorphism UI with dynamic gradients
+- **AI-Focused**: Marketing automation and predictive analytics showcase
+- **Responsive**: Mobile-first approach with optimized layouts
+- **Performance**: Lighthouse-optimized with lazy loading and image optimization
+- **Animations**: Smooth transitions with Framer Motion
+- **Interactive Elements**: 3D marquee testimonials, floating cards, animated counters
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/586db1fd-7119-4bbb-b73b-431574ac6be7) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React 18** + **TypeScript**
+- **Vite** - Lightning fast build tool
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations
+- **Shadcn/ui** - Modern UI components
+- **Lucide React** - Beautiful icons
 
-**Use your preferred IDE**
+## 🏃‍♂️ Quick Start
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# Install dependencies
+npm install
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 📱 Sections
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Hero with lamp spotlight effect
+- Features showcase with video background
+- Value stream interactive flow
+- Testimonials with 3D marquee
+- Pricing with animated borders
+- FAQ with smooth accordions
+- Contact form with validation
 
-**Use GitHub Codespaces**
+## 🎨 Design Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Custom Lamp Effect**: Animated conic gradient spotlight
+- **Dynamic Gradients**: 5 unique gradient variants for sections
+- **Linear Typography**: Consistent font system with proper spacing
+- **Glass Effects**: Backdrop blur with transparency
+- **Hover Interactions**: Scale animations and glow effects
 
-## What technologies are used for this project?
+## ⚡ Performance
 
-This project is built with:
+- Lazy loading for all images
+- Optimized bundle size
+- CSS-in-JS animations for 60fps
+- Responsive image formats
+- Minimal third-party dependencies
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📄 License
 
-## How can I deploy this project?
+MIT License - Built for educational and portfolio purposes.
 
-Simply open [Lovable](https://lovable.dev/projects/586db1fd-7119-4bbb-b73b-431574ac6be7) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Total Development Time**: < 6 hours | **Built with**: Speed + Precision

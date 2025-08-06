@@ -55,12 +55,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden section-transition section-fade-in">
-      {/* Seamless Transition Fade Overlay - This eliminates the hard line */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-10"
-      />
+    <section className="py-16 md:py-24 lg:py-32 bg-slate-950 relative overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 opacity-20">
         <video
@@ -75,52 +70,51 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Subtle Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950/80" />
 
-      <div className="container mx-auto px-6 flex flex-col relative z-10" style={{ maxWidth: '80rem' }}>
+      <div className="container mx-auto px-4 lg:px-6 flex flex-col relative z-10" style={{ maxWidth: '80rem' }}>
         {/* Section Header */}
-        <div className="text-center space-y-8 mb-24">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-primary text-sm font-medium">
+        <div className="text-center space-y-6 md:space-y-8 mb-16 md:mb-24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-primary text-sm font-medium">
             <Sparkles className="h-4 w-4" />
             Powerful Features
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-center">
-            <span className="dynamic-gradient-text">Everything You Need to</span>
-            <span className="block dynamic-gradient-text">Dominate Your Market</span>
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-medium tracking-tighter leading-tight text-center">
+            <span className="dynamic-gradient-text-features">Everything You Need to</span>
+            <span className="block dynamic-gradient-text-features">Dominate Your Market</span>
           </h2>
 
-          <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-400 font-medium max-w-4xl mx-auto leading-relaxed px-4">
             Our comprehensive AI suite provides all the tools you need to create, manage,
             and optimize your marketing campaigns with unprecedented precision and efficiency.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Features Grid - Mobile-optimized with better spacing */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="animate-fade-in-up"
+              className="animate-fade-in-up h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <FeatureCard
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+                className="h-full min-h-[280px] md:min-h-[320px]"
               />
             </div>
           ))}
         </div>
 
-
-
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <p className="text-white/80 mb-6 text-lg">
+        <div className="text-center mt-16 md:mt-20">
+          <p className="text-slate-400 font-medium mb-6 text-lg">
             Ready to experience the future of marketing?
           </p>
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-br from-black/70 via-gray-900/60 to-gray-800/50 backdrop-blur-xl border border-white/20 hover:bg-white/10 cursor-pointer group transition-all duration-300">
+          <div className="inline-flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 rounded-xl bg-gradient-to-br from-black/70 via-gray-900/60 to-gray-800/50 backdrop-blur-xl border border-white/20 hover:bg-white/10 cursor-pointer group transition-all duration-300">
             <span className="text-primary font-medium">Explore All Features</span>
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           </div>
